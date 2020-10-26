@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/pandu/.dotfiles'
+let g:netrw_dirhist_0='/home/pandu/kbrinl/kbrinl-passport-service-api/src'
+let g:netrw_dirhist_9='/home/pandu/kbrinl/kbrinl-passport-service-api/src/controllers'
+let g:netrw_dirhist_8='/home/pandu/kbrinl/kbrinl-passport-service-api/src/use-cases/register-passport-holder'
+let g:netrw_dirhist_7='/home/pandu/kbrinl/kbrinl-passport-service-api/src/use-cases'
+let g:netrw_dirhist_6='/home/pandu/kbrinl/kbrinl-passport-service-api/src'
+let g:netrw_dirhist_5='/home/pandu/kbrinl/kbrinl-passport-service-api/src/data-access'
+let g:netrw_dirhist_4='/home/pandu/kbrinl/kbrinl-passport-service-api/src'
+let g:netrw_dirhist_3='/home/pandu/kbrinl/kbrinl-passport-service-api'
+let g:netrw_dirhist_2='/home/pandu/kbrinl/kbrinl-passport-service-api/src/controllers'

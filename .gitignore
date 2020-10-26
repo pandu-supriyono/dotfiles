@@ -1,0 +1,10 @@
+node_modules/
+# Coc
+coc/
+/coc/*
+!/coc/extensions
+/coc/extensions/*
+!/coc/extensions/package.json
+!/coc/extensions/yarn.lock
+.config/nvim/plugged/
+

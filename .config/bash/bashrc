@@ -1,0 +1,34 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Infinite histfile 
+HISTSIZE=
+HISTFILESIZE= 
+
+# Store histfile in .local/share
+export HISTFILE="$XDG_DATA_HOME"/bash/history
+
+# Enable colors
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# Source bash powerline
+source ~/.config/bash/bash_powerline
+
+# set PATH
+PATH="$HOME/.scripts/:$PATH"
+PATH="$HOME/.local/bin/:$PATH"
+
+if [ -f ~/.config/bash/aliasrc ]; then
+	. ~/.config/bash/aliasrc
+fi
+
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm
+export NVM_DIR="$HOME/.local/bin/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

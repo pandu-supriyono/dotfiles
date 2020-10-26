@@ -1,0 +1,39 @@
+#
+# ~/.bash_profile
+#
+
+# User locale
+LC_LANG=en_US.UTF-8
+LC_MEASUREMENT=en_US.UTF-8
+LC_PAPER=nl_NL.UTF-8
+LC_MONETARY=nl_NL.UTF-8
+LC_NAME=en_US.UTF-8
+LC_COLLATE=en_US.UTF-8
+LC_CTYPE=en_US.UTF-8
+LC_ADDRESS=nl_NL.UTF-8
+LC_NUMERIC=nl_NL.UTF-8
+LC_MESSAGES=en_US.UTF-8
+LC_TELEPHONE=nl_NL.UTF-8
+LC_IDENTIFICATION=nl_NL.UTF-8
+LC_TIME=nl_NL.UTF-8
+
+# Default programs
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="firefox"
+export READER="zathura"
+
+# Change behaviour non-XDG_CONFIG_HOME-compliant programs and scripts
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+
+[[ -f ~/.config/bash/bashrc ]] && . ~/.config/bash/bashrc
+
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+elif [[ $DISPLAY && XDG_VTNR -eq 1 ]]; then
+	eval `keychain -q --eval ~/.ssh/id_rsa --dir ~/.local/share/keychain`
+fi
+
+
